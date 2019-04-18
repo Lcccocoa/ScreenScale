@@ -3,7 +3,7 @@
 
 设计稿UI 针对的屏幕宽度定义在
 ```swift
-Float.designWidth = Float(375)
+static let screenWidth:CGFloat = 375.0
 ```
 
 例如:
@@ -12,8 +12,7 @@ Float.designWidth = Float(375)
 
 使用如下方法进行等比缩放
 ```swift
-print("\(Float(10.0).widthScale)")
+print("\(10.0.scale)")
 print("\(Float(20.0).heightScale(width: Float(10.0)))")
-var size = CGSize(width: 10, height: 20).screenScale
-print(size)
+print(CGSize(width: 10, height: 20).scale)
 ```
